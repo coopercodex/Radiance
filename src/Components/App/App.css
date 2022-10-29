@@ -1,17 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
 .App {
-  text-align: center;
+  background-color: hsl(0deg 0% 0%);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.affirmation-button {
+  border: #edb86b;
+  font-family: 'Montserrat', sans-serif;
+  color: #edb86b;
+  background-color: black;
+  border-style: solid;
+  width: 10%;
+  height: 5%;
+  margin-top: 2%;
+  font-size: 1.25rem;
 }
 
-@media (prefers-reduced-motion: no-preference) {
+.welcome {
+  color: #edb86b;
+  font-family: 'Bodoni Moda', serif;
+}
+
+
+/* @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
   }
-}
+} */
 
 .App-header {
   background-color: #282c34;
@@ -24,15 +47,6 @@
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
-}
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
+
+
