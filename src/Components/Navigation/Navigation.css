@@ -1,0 +1,12 @@
+.Nav {
+    display: flex;
+    flex-direction: row;
+    width: 100vw;
+    height: 40vh;
+    justify-content: flex-end;
+    background-color: black;
+}
+
+.radiance-logo {
+    padding-right: 2%;
+}
