@@ -7,36 +7,12 @@
   background-color: hsl(0deg 0% 0%);
   width: 100vw;
   height: 100vh;
-  display: flex;
+  /* display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: center; */
 }
 
-.affirmation-button {
-  border: #edb86b;
-  font-family: 'Montserrat', sans-serif;
-  color: #edb86b;
-  background-color: black;
-  border-style: solid;
-  width: 12%;
-  height: 5%;
-  margin-top: 2%;
-  font-size: 1.25rem;
-}
 
-.affirmation-button:hover{
-  box-shadow: 0 0 10px 0 #edb86b inset, 0 0 20px 2px #edb86b;
-  border: 2px solid #edb86b;
-  color:#edb86b;
-
-  -webkit-transition: all .15s ease-in-out;
-  transition: all .15s ease-in-out;
-}
-
-.welcome {
-  color: #edb86b;
-  font-family: 'Bodoni Moda', serif;
-}
 
 
 /* @media (prefers-reduced-motion: no-preference) {

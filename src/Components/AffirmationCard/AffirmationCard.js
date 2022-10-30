@@ -23,7 +23,7 @@ class AffirmationCard extends Component {
         return (
         <div className = 'card-container'>
             <div className='affirmation-card'>
-                <p className='card-title'>Affirmation</p>
+                {/* <p className='card-title'>Affirmation</p> */}
                 <p className ='card-description'> {affirm.description}</p>
                 <img className='affirm-pic'src={image_1}/>
                 <div className = 'favorite-container'> 
