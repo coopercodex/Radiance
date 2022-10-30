@@ -1,10 +1,14 @@
 import React, { Component } from 'react'
 import Navigation from '../Navigation/Navigation'
+import Footer from '../Footer/Footer';
 import './App.css';
 
 class App extends Component {
   constructor() {
-    super()
+    super(); 
+    this.state = {
+      
+    }
   }
 
   render() {
@@ -17,6 +21,7 @@ class App extends Component {
           Hello, you lovely human
         </h1>
         <button className='affirmation-button'>take a breath</button>
+        <Footer /> 
       </main>
     )
   }
