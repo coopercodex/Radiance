@@ -2,7 +2,7 @@ import React from 'react'
 import radiance_logo from '../../images/radiance_logo.png'
 import './Navigation.css'
 
-const Navigation = () => {
+const Navigation = ({ handleClick }) => {
     return (
         <section className='Nav'>
             <div className='logo-container'>
@@ -10,9 +10,9 @@ const Navigation = () => {
             </div>
             <div className='welcome-container'>
                 <h1 className='welcome'>
-                    hello, you lovely human
+                    Hello, you lovely human.
                 </h1>
-                <button className='affirmation-button'>take a breath</button>
+                <button onClick={() => handleClick()} className='affirmation-button'>Take a breath</button>
             </div>
         </section>
     )
