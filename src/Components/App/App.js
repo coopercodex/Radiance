@@ -18,8 +18,8 @@ class App extends Component {
     // console.log(this.state.affirmations.affirmations)
     return (
       <main className='App'>
-          {/* <Navigation /> */}
-        <AffirmationCard />
+          <Route path='/' component={Navigation} />
+        {/* <AffirmationCard /> */}
       </main>
     )
   }
