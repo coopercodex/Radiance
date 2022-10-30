@@ -9,12 +9,17 @@ class AffirmationCard extends Component {
     constructor() {
         super();
         this.state = {
-            affirmations: affirmationsData
+            affirmations: affirmationsData.affirmations
         }
     }
 
+    generateRandom(){
+        return Math.floor(Math.random() * this.state.affirmations.length);
+    }
+
     render() {
-        const affirm = this.state.affirmations.affirmations[0]
+        // console.log(this.generateRandom())
+        const affirm = this.state.affirmations[this.generateRandom()]
         return (
         <div className = 'card-container'>
             <div className='affirmation-card'>

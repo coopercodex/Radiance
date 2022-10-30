@@ -17,14 +17,14 @@ class App extends Component {
     // console.log(this.state.affirmations.affirmations)
     return (
       <main className='App'>
-        <nav>
+        {/* <nav>
           <Navigation />
         </nav>
         <h1 className='welcome'>
           Hello, you lovely human
         </h1>
-        <button className='affirmation-button'>take a breath</button>
-        {/* <AffirmationCard />  */}
+        <button className='affirmation-button'>take a breath</button> */}
+        <AffirmationCard /> 
         {/* <Footer />  */}
       </main>
     )
