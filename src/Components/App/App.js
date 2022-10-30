@@ -14,7 +14,7 @@ class App extends Component {
           <Navigation />
         </nav>
         <h1 className='welcome'>
-          hello, you lovely human
+          Hello, you lovely human
         </h1>
         <button className='affirmation-button'>take a breath</button>
       </main>
