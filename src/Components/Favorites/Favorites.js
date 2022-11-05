@@ -1,12 +1,40 @@
-import React from 'react';
-import image_1 from '../../images/image_1.png'
-const Favorite = ({ props, handleReset }) => {
+
+import React from "react";
+import Footer from "../Footer/Footer";
+
+
+const Favorites = ({ favs }) => {
+    console.log(favs)
+
     return (
-        <div className="favorites-card">
-            <p>{props.description}</p>
-            <img className='affirm-pic' alt={props.id} image={props.image} src={image_1} />
-            <p className="home-page" onClick={() => handleReset()}>HOME</p>
+        <div className="Favorites">
+            {/* {favs[0].description} */}
+            <h1 style={{ color: 'gold' }}>{favs[0].description}
+                {favs[1].description}
+                {favs[2].description}</h1>
+            <Footer />
         </div>
     )
 }
-export default Favorite;
+
+export default Favorites;
+
+import React from 'react';
+import AffirmationCard from '../AffirmationCard/AffirmationCard';
+import './Favorites.css';
+
+const Favorites = ({ affirmation }) => {
+    const favorite = affirmation.map((affirm) => {
+        return (
+            <div className="mini-card" key={affirm.id}>
+                <p className="mini-description"> {affirm.description}</p>
+                <img className="mini-pic" src={affirm.image} />
+            </div>
+        );
+    });
+
+    return <div className="mini-container">{favorite}</div>;
+};
+
+export default Favorites;
+

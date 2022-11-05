@@ -1,8 +1,8 @@
-import React from 'react'
-import radiance_logo from '../../images/radiance_logo.png'
-import './Navigation.css'
+import React from 'react';
+import radiance_logo from '../../images/radiance_logo.png';
+import './Navigation.css';
 
-const Navigation = ({ handleClick }) => {
+const Navigation = ({ history }) => {
     return (
         <section className='Nav'>
             <div className='logo-container'>
@@ -12,9 +12,12 @@ const Navigation = ({ handleClick }) => {
                 <h1 className='welcome'>
                     Hello, you lovely human.
                 </h1>
-                <button onClick={() => handleClick()} className='affirmation-button'>Take a breath</button>
+                <button onClick={() => 
+                history.push('/affirmationCard')
+                } className='affirmation-button'>Take a breath</button>
             </div>
         </section>
     )
 }
 export default Navigation
+

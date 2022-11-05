@@ -40,17 +40,17 @@
   color: #edb86b;
   background-color: black;
   border-style: solid;
-  width: 10%;
-  height: 5%;
+  width: 15%;
+  height: 10%;
   margin-top: 2%;
-  font-size: 1.25rem;
+  font-size: 1rem;
   contain: content;
-  font-family: cursive;
+  border: solid 1px #edb86b; 
 }
 
 .affirmation-button:hover {
   box-shadow: 0 0 10px 0 #edb86b inset, 0 0 20px 2px #edb86b;
-  border: 2px solid #edb86b;
+  border: 1px solid #edb86b;
   color: #edb86b;
 
   -webkit-transition: all .15s ease-in-out;
@@ -58,7 +58,7 @@
 }
 
 .welcome {
-  color: #edb86b;
+  color: #ffffff;
   font-family: 'Bodoni Moda', serif;
   font-size: 3em;
 }
