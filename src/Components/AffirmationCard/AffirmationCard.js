@@ -18,7 +18,7 @@ const AffirmationCard = ({ affirmations, add }) => {
                 </p>
                 <img className='affirm-pic' src={currentAffirm.image} />
                 <div className='favorite-container'>
-                    <button onClick={() => add(currentAffirm.id)}> <img className='favorite' src={favoriteLogo} /> </button>
+                    <button onClick={() => add(currentAffirm.id)}> <img className='favorite-button' src={favoriteLogo} /> </button>
                 </div>
             </div>
             <Footer />

@@ -45,7 +45,7 @@ class App extends Component {
         <Switch>
         <main className='App'>
         <Route exact path='/' component={Navigation}/> 
-        <Route exact path="/affirmationCard" render={() => <AffirmationCard affirmations={this.state.affirmations} add={this.addFavorites} favs={this.state.favorites} />} /> 
+        <Route exact path="/affirmationCard" render={() => <AffirmationCard affirmations={this.state.affirmations} add={this.addFavorites} />} /> 
         <Route exact path="/favorites" render={() => <Favorites affirmations={this.state.affirmations} add={this.addFavorites} favs={this.state.favorites} />}/>
         </main>
         </Switch>
