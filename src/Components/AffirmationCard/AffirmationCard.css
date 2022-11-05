@@ -8,19 +8,20 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: solid 2px #edb86b;
+    border: solid 1px #edb86b;
     height: 45vh;
     width: 65vw;
-    color: #edb86b;
+    color: white;
     contain: content;
     justify-content: center;
     margin-top: 10%;
     box-shadow: 0 2px 5px 0 #edb86b inset, 0 0 10px 0px #edb86b;
+    font-family: 'Montserrat', sans-serif;  
 }
 
 .affirm-pic {
-    height: 50%;
-    margin-top: 5%;
+    height: 40%;
+    margin-top: 6%;
 }
 
 /* .card-title{
@@ -39,11 +40,18 @@
     bottom: 5px;
 }
 
-.favorite {
+.favorite-button, button {
     height: 8vh;
     align-items: flex-start;
+    padding: 0;
+    border: none;
+    background: black;
 }
-
+/* button{
+    border:none;
+    padding: 0; 
+    
+} */
 .footer {
     display: flex;
     background-color: black;
@@ -53,7 +61,7 @@
     contain: content;
     justify-content: center;
     align-items: center;
-    color: #edb86b;
+    /* color: #edb86b; */
     position: fixed;
     bottom: 0;
     /* box-shadow: 0 2px 0px 0 #edb86b inset, 0 0 20px 0px #edb86b; */
