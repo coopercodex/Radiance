@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom'
 import Navigation from '../Navigation/Navigation'
@@ -32,20 +31,12 @@ class App extends Component {
   }
 
   render() {
-    // console.log('this is mapped',this.mapData())
-    // if (!this.state.affirmations) {
-    //   return (
-    //     <p>loading</p>
-    //     );
-    //   }
-    // console.log(this.state.affirmations[0].description)
-    // console.log(this.state.affirmations[0].map(affirm => affirm))
     return (
       <BrowserRouter>
         <Switch>
           <main className='App'>
             <Route exact path='/' component={Navigation} />
-            <Route exact path="/affirmationCard" render={() => <AffirmationCard affirmations={this.state.affirmations} add={this.addFavorites} favs={this.state.favorites} />} />
+            <Route exact path="/affirmationCard" render={() => <AffirmationCard affirmations={this.state.affirmations} add={this.addFavorites} />} />
             <Route exact path="/favorites" render={() => <Favorites affirmations={this.state.affirmations} add={this.addFavorites} favs={this.state.favorites} />} />
           </main>
         </Switch>

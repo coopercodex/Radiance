@@ -3,7 +3,6 @@ import React, { Component, useState } from 'react'
 import Footer from '../Footer/Footer';
 import './AffirmationCard.css'
 import favoriteLogo from '../../images/image_10.png'
-import { getData } from '../../apiCalls';
 
 const AffirmationCard = ({ affirmations, add }) => {
     const getAffirmations = affirmations.map((affirm) => {
@@ -19,7 +18,7 @@ const AffirmationCard = ({ affirmations, add }) => {
                 </p>
                 <img className='affirm-pic' src={currentAffirm.image} />
                 <div className='favorite-container'>
-                    <button onClick={() => add(currentAffirm.id)}> <img className='favorite' src={favoriteLogo} /> </button>
+                    <button onClick={() => add(currentAffirm.id)}> <img className='favorite-button' src={favoriteLogo} /> </button>
                 </div>
             </div>
             <Footer />
