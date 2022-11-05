@@ -40,8 +40,8 @@
     bottom: 5px;
 }
 
-.favorite-button,
-button {
+
+.favorite-button, button {
     height: 8vh;
     align-items: flex-start;
     padding: 0;
@@ -49,11 +49,6 @@ button {
     background: black;
 }
 
-/* button{
-    border:none;
-    padding: 0; 
-    
-} */
 .footer {
     display: flex;
     background-color: black;
@@ -62,6 +57,8 @@ button {
     contain: content;
     justify-content: center;
     align-items: center;
+    /* color: #edb86b; */
+    position: fixed;
     bottom: 0;
 }
 
