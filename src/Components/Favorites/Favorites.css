@@ -1,0 +1,26 @@
+.mini-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+.mini-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10px;
+    border: 1px solid #edb86b;
+    color: #edb86b;
+    width: 30vw;
+    height: 25vh;
+    contain: content;
+    padding: 2px;
+    text-align: center;
+    justify-content: center;
+}
+
+.mini-pic {
+    height: auto;
+    width: 40%;
+}
