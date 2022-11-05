@@ -16,3 +16,4 @@ const Footer = ({ handleReset }) => {
     )
 }
 export default Footer
+

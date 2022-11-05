@@ -1,9 +1,11 @@
+
 import React, { Component } from 'react'
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom'
 import Navigation from '../Navigation/Navigation'
 import './App.css';
 import AffirmationCard from '../AffirmationCard/AffirmationCard';
 import Favorites from '../Favorites/Favorites';
+
 
 class App extends Component {
   constructor() {
@@ -30,6 +32,14 @@ class App extends Component {
 }
 
   render() {
+    // console.log('this is mapped',this.mapData())
+    // if (!this.state.affirmations) {
+    //   return (
+    //     <p>loading</p>
+    //     );
+    //   }
+    // console.log(this.state.affirmations[0].description)
+    // console.log(this.state.affirmations[0].map(affirm => affirm))
     return (
       <BrowserRouter>
         <Switch>
@@ -41,7 +51,7 @@ class App extends Component {
         </Switch>
       </BrowserRouter>
     )
-  }
 
+  }
 }
 export default App;

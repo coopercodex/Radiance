@@ -1,6 +1,6 @@
-import React from 'react'
-import radiance_logo from '../../images/radiance_logo.png'
-import './Navigation.css'
+import React from 'react';
+import radiance_logo from '../../images/radiance_logo.png';
+import './Navigation.css';
 
 const Navigation = ({ history }) => {
     return (
@@ -20,3 +20,4 @@ const Navigation = ({ history }) => {
     )
 }
 export default Navigation
+

@@ -1,3 +1,4 @@
+
 import React, { Component, useState } from 'react'
 import Footer from '../Footer/Footer';
 import './AffirmationCard.css'
@@ -23,5 +24,6 @@ const AffirmationCard = ({ affirmations, add }) => {
             <Footer />
         </div>
     ) : null
+
 }
 export default AffirmationCard;
