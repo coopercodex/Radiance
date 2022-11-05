@@ -35,9 +35,9 @@ class App extends Component {
       <BrowserRouter>
         <main className='App'>
         <Switch>
-        <Route exact path='/' component={Navigation}/> 
-        <Route exact path="/affirmationCard" render={() => <AffirmationCard affirmations={this.state.affirmations} add={this.addFavorites} />} /> 
-        <Route exact path="/favorites" render={() => <Favorites affirmations={this.state.affirmations} add={this.addFavorites} favs={this.state.favorites} />}/>
+          <Route exact path='/' component={Navigation}/> 
+          <Route exact path="/affirmationCard" render={() => <AffirmationCard affirmations={this.state.affirmations} add={this.addFavorites} />} /> 
+          <Route exact path="/favorites" render={() => <Favorites affirmations={this.state.affirmations} add={this.addFavorites} favs={this.state.favorites} />}/>
         </Switch>
         </main>
       </BrowserRouter>
