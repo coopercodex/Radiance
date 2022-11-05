@@ -1,55 +1,35 @@
-import React, { Component } from 'react';
-import { Route } from 'react-router-dom';
-import Navigation from '../Navigation/Navigation';
-import Footer from '../Footer/Footer';
+
+import React, { Component } from 'react'
+import { BrowserRouter, Link, Route, Switch } from 'react-router-dom'
+import Navigation from '../Navigation/Navigation'
 import './App.css';
-import affirmationsData from '../../AffirmationsData.js';
 import AffirmationCard from '../AffirmationCard/AffirmationCard';
-import { getData } from '../../apicalls';
+import Favorites from '../Favorites/Favorites';
+
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      affirmations: null,
-      isClicked: false,
-    };
+      affirmations: [],
+      favorites: [],
+    }
   }
 
-  // componentDidMount= () => {
-  //   fetch('https://radiance-app.herokuapp.com/api/v1/affirmations')
-  //   .then(response => response.json())
-  //   .then(data => this.setState({ affirmations: data }))
-  //   .catch(err => console.log(err))
-  // }
+  addFavorites = (id) => {
+    const favs = this.state.affirmations.find(affirm => affirm.id === id);
+    this.setState({favorites: [...this.state.favorites, favs]})
+    console.log(favs)
+  }
 
-  //   componentDidMount = async() => {
-  //     // fetch('https://radiance-app.herokuapp.com/api/v1/affirmations')
-  //     try {
-  //         const result = await getData()
-  //         const data = await result.json()
-  //         this.setState({affirmations: data})
-
-  //     } catch (error) {
-  //         this.setState({
-  //             error: 'There was an error fetching your ideas'
-  //         })
-  //     }
-  // }
-
-  handleClick = () => {
-    this.setState({ isClicked: true });
-  };
-  handleReset = () => {
-    this.setState({ isClicked: false });
-  };
-
-  mapData = () => {
-    const mapped = this.state.affirmations.map((affirm) => {
-      return [affirm][0].id;
-    });
-    return mapped;
-  };
+  componentDidMount = () => {
+    fetch('https://radiance-app.herokuapp.com/api/v1/affirmations')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+      this.setState({affirmations: data})
+  })
+}
 
   render() {
     // console.log('this is mapped',this.mapData())
@@ -61,24 +41,17 @@ class App extends Component {
     // console.log(this.state.affirmations[0].description)
     // console.log(this.state.affirmations[0].map(affirm => affirm))
     return (
-      <main className="App">
-        <Route
-          exact
-          path="/"
-          render={() => {
-            return this.state.isClicked ? (
-              <AffirmationCard
-                handleReset={this.handleReset}
-                affirmations={this.state.affirmations}
-              />
-            ) : (
-              <Navigation handleClick={this.handleClick} />
-            );
-          }}
-        />
-        {/* <AffirmationCard />  */}
-      </main>
-    );
+      <BrowserRouter>
+        <Switch>
+        <main className='App'>
+        <Route exact path='/' component={Navigation}/> 
+        <Route exact path="/affirmationCard" render={() => <AffirmationCard affirmations={this.state.affirmations} add={this.addFavorites} favs={this.state.favorites} />} /> 
+        <Route exact path="/favorites" render={() => <Favorites affirmations={this.state.affirmations} add={this.addFavorites} favs={this.state.favorites} />}/>
+        </main>
+        </Switch>
+      </BrowserRouter>
+    )
+
   }
 }
 export default App;
