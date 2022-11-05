@@ -16,7 +16,7 @@
     justify-content: center;
     margin-top: 10%;
     box-shadow: 0 2px 5px 0 #edb86b inset, 0 0 10px 0px #edb86b;
-    font-family: 'Montserrat', sans-serif;  
+    font-family: 'Montserrat', sans-serif;
 }
 
 .affirm-pic {
@@ -40,6 +40,7 @@
     bottom: 5px;
 }
 
+
 .favorite-button, button {
     height: 8vh;
     align-items: flex-start;
@@ -47,24 +48,18 @@
     border: none;
     background: black;
 }
-/* button{
-    border:none;
-    padding: 0; 
-    
-} */
+
 .footer {
     display: flex;
     background-color: black;
     width: 100vw;
     height: 20vh;
-    /* border: solid 2px #edb86b; */
     contain: content;
     justify-content: center;
     align-items: center;
     /* color: #edb86b; */
     position: fixed;
     bottom: 0;
-    /* box-shadow: 0 2px 0px 0 #edb86b inset, 0 0 20px 0px #edb86b; */
 }
 
 .radiance-logo-footer {

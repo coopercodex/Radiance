@@ -1,4 +1,3 @@
-
 import React, { Component } from 'react'
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom'
 import Navigation from '../Navigation/Navigation'
@@ -18,7 +17,7 @@ class App extends Component {
 
   addFavorites = (id) => {
     const favs = this.state.affirmations.find(affirm => affirm.id === id);
-    this.setState({favorites: [...this.state.favorites, favs]})
+    this.setState({ favorites: [...this.state.favorites, favs] })
     console.log(favs)
   }
 
@@ -27,19 +26,11 @@ class App extends Component {
       .then(response => response.json())
       .then(data => {
         console.log(data)
-      this.setState({affirmations: data})
-  })
-}
+        this.setState({ affirmations: data })
+      })
+  }
 
   render() {
-    // console.log('this is mapped',this.mapData())
-    // if (!this.state.affirmations) {
-    //   return (
-    //     <p>loading</p>
-    //     );
-    //   }
-    // console.log(this.state.affirmations[0].description)
-    // console.log(this.state.affirmations[0].map(affirm => affirm))
     return (
       <BrowserRouter>
         <Switch>

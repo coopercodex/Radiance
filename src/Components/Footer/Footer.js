@@ -4,7 +4,7 @@ import radiance_logo from '../../images/radiance_logo.png'
 import { BrowserRouter, Link, Route, Routes, Switch } from 'react-router-dom'
 import App from '../App/App'
 
-const Footer = ({ handleReset }) => {
+const Footer = ({ handleReset, handleFavoriteClick, resetFavorites }) => {
     return (
         <div className='footer'>
             <Link to="/" className="home-link">HOME</Link>
