@@ -1,5 +1,6 @@
 import React from "react";
 import Favorite from "../Favorites/Favorites";
+
 const FavoriteContainer = ({ favorites, handleReset }) => {
     let userFavorites = favorites.map((fav) => {
         return (

@@ -8,13 +8,14 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    border: solid 1px #edb86b;
+    border: solid .75px #edb86b;
     height: 45vh;
-    width: 65vw;
+    width: 55vw;
     color: white;
     contain: content;
     justify-content: center;
     margin-top: 10%;
+    padding: 1%;
     box-shadow: 0 2px 5px 0 #edb86b inset, 0 0 10px 0px #edb86b;
     font-family: 'Montserrat', sans-serif;
 }
@@ -40,7 +41,6 @@
     bottom: 5px;
 }
 
-
 .favorite-button, button {
     height: 8vh;
     align-items: flex-start;
@@ -49,23 +49,12 @@
     background: black;
 }
 
-.footer {
-    display: flex;
-    background-color: black;
-    width: 100vw;
-    height: 20vh;
-    contain: content;
+.favorite-text {
+    color:  #edb86b;
+    align-items: flex-start;
+    padding: 0;
     justify-content: center;
-    align-items: center;
-    /* color: #edb86b; */
-    position: fixed;
-    bottom: 0;
-}
-
-.radiance-logo-footer {
-    height: 100%;
-    margin-left: 50px;
-    margin-right: 50px;
+    margin-left: 2%;
 }
 
 .home-link,

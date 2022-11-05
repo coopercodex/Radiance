@@ -6,8 +6,8 @@ import './Favorites.css'
 const Favorites = ({ favs }) => {
   const favorite = favs.map((affirm) => {
     return (
-      <div className="mini-container">
-        <div>
+      <div>
+        <div className="mini-container">
           <div className="mini-card" key={affirm.id}>
             <p className="mini-description"> {affirm.description}</p>
             <img className="mini-pic" src={affirm.image} />
@@ -18,7 +18,7 @@ const Favorites = ({ favs }) => {
     );
   });
 
-  return <div className="mini-container">{favorite}</div>;
+  return <div className="mini-fav-container">{favorite}</div>;
 };
 
 
