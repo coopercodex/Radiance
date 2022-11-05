@@ -1,25 +1,26 @@
-.mini-container{
+.mini-container {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-content: center;
 }
 
-.mini-card{
+.mini-card {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 10px;
-    border: 2px solid #edb86b;;
+    margin: 10px;
+    border: 1px solid #edb86b;
     color: #edb86b;
     width: 30vw;
     height: 25vh;
     contain: content;
     padding: 2px;
     text-align: center;
+    justify-content: center;
 }
 
-.mini-pic{
+.mini-pic {
     height: auto;
     width: 40%;
 }
