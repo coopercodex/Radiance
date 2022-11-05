@@ -1,41 +1,45 @@
 import React, { Component } from 'react'
-import { Route } from 'react-router-dom'
+import { BrowserRouter, Link, Route, Switch } from 'react-router-dom'
 import Navigation from '../Navigation/Navigation'
-import Footer from '../Footer/Footer';
 import './App.css';
-import affirmationsData from '../../AffirmationsData.js'
 import AffirmationCard from '../AffirmationCard/AffirmationCard';
+import Favorites from '../Favorites/Favorites';
 
 class App extends Component {
   constructor() {
     super();
     this.state = {
-      affirmations: affirmationsData,
-      isClicked: false
+      affirmations: [],
+      favorites: [],
     }
   }
-  handleClick = () => {
-    this.setState({ isClicked: true })
-    console.log('here!')
+
+  addFavorites = (id) => {
+    const favs = this.state.affirmations.find(affirm => affirm.id === id);
+    this.setState({favorites: [...this.state.favorites, favs]})
+    console.log(favs)
   }
-  handleReset = () => {
-    this.setState({ isClicked: false })
-  }
+
+  componentDidMount = () => {
+    fetch('https://radiance-app.herokuapp.com/api/v1/affirmations')
+      .then(response => response.json())
+      .then(data => {
+        console.log(data)
+      this.setState({affirmations: data})
+  })
+}
+
   render() {
     return (
-      <main className='App'>
-        <Route
-          exact
-          path="/"
-          render={() => {
-            return (
-              this.state.isClicked ? (
-                <AffirmationCard handleReset={this.handleReset} />
-              ) : (<Navigation handleClick={this.handleClick} />))
-          }
-          }
-        />
-      </main>
+      <BrowserRouter>
+        <Switch>
+        <main className='App'>
+        <Route exact path='/' component={Navigation}/> 
+        <Route exact path="/affirmationCard" render={() => <AffirmationCard affirmations={this.state.affirmations} add={this.addFavorites} favs={this.state.favorites} />} /> 
+        <Route exact path="/favorites" render={() => <Favorites affirmations={this.state.affirmations} add={this.addFavorites} favs={this.state.favorites} />}/>
+        </main>
+        </Switch>
+      </BrowserRouter>
     )
   }
 
