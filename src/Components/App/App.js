@@ -33,16 +33,15 @@ class App extends Component {
   render() {
     return (
       <BrowserRouter>
-        <Switch>
         <main className='App'>
+        <Switch>
         <Route exact path='/' component={Navigation}/> 
         <Route exact path="/affirmationCard" render={() => <AffirmationCard affirmations={this.state.affirmations} add={this.addFavorites} />} /> 
         <Route exact path="/favorites" render={() => <Favorites affirmations={this.state.affirmations} add={this.addFavorites} favs={this.state.favorites} />}/>
-        </main>
         </Switch>
+        </main>
       </BrowserRouter>
     )
-
   }
 }
 export default App;
