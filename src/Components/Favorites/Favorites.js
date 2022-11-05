@@ -11,12 +11,17 @@ const Favorites = ({ favs }) => {
           <p className="mini-description"> {affirm.description}</p>
           <img className="mini-pic" src={affirm.image} />
         </div>
-        <Footer />
+        {/* <Footer /> */}
       </div>
     );
   });
 
-  return <div className="mini-fav-container">{favorite}</div>;
+  return (
+    <div className="mini-fav-container">
+      {favorite}
+      <Footer />
+    </div>
+  );
 };
 
 

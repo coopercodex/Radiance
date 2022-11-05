@@ -25,9 +25,15 @@ class App extends Component {
     fetch('https://radiance-app.herokuapp.com/api/v1/affirmations')
       .then(response => response.json())
       .then(data => {
-        console.log(data)
         this.setState({ affirmations: data })
       })
+    this.dataClean()
+  }
+  dataClean = (data) => {
+    const lol = {}
+    this.state.affirmations.map((affirm) => {
+      this.setState({ affirmations: [...this.state.affirmations, { isfavortie: false }]})
+    })
   }
 
   render() {
