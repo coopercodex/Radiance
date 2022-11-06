@@ -4,6 +4,7 @@ import Navigation from '../Navigation/Navigation'
 import './App.css';
 import AffirmationCard from '../AffirmationCard/AffirmationCard';
 import Favorites from '../Favorites/Favorites';
+import { getData } from '../../apicalls';
 
 
 class App extends Component {
@@ -12,6 +13,7 @@ class App extends Component {
     this.state = {
       affirmations: [],
       favorites: [],
+      error: ''
     }
   }
 
@@ -21,23 +23,35 @@ class App extends Component {
     console.log(favs)
   }
 
-  componentDidMount = () => {
-    fetch('https://radiance-app.herokuapp.com/api/v1/affirmations')
-      .then(response => response.json())
-      .then(data => {
-        console.log(data)
-        this.setState({ affirmations: data })
-      })
+  componentDidMount = async () => {
+    try {
+      const result = await getData()
+      const data = await result.json()
+      this.setState({ affirmations: data })
+    } catch (error) {
+      this.setState({ error: `There was an error retrieving the data.`})
+    }
   }
+
+  //     getData()
+  //       .then(response => response.json())
+  //       .then(data => {
+  //         this.setState({ affirmations: data })
+  //         .catch(() => this.setState({ error: 'There was an error retrieving your data' }))
+  //       })
+  //   }
+  // }
+
 
   render() {
     return (
       <BrowserRouter>
         <main className='App'>
         <Switch>
-        <Route exact path='/' component={Navigation}/> 
-        <Route exact path="/affirmationCard" render={() => <AffirmationCard affirmations={this.state.affirmations} add={this.addFavorites} />} /> 
-        <Route exact path="/favorites" render={() => <Favorites affirmations={this.state.affirmations} add={this.addFavorites} favs={this.state.favorites} />}/>
+          <Route exact path='/' component={Navigation} /> 
+            {this.state.error && <h2 className="api-error">{this.state.error }</h2>}
+          <Route exact path="/affirmationCard" render={() => <AffirmationCard affirmations={this.state.affirmations} add={this.addFavorites} />} /> 
+          <Route exact path="/favorites" render={() => <Favorites affirmations={this.state.affirmations} add={this.addFavorites} favs={this.state.favorites} />} />
         </Switch>
         </main>
       </BrowserRouter>

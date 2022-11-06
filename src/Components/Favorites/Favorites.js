@@ -6,19 +6,22 @@ import './Favorites.css'
 const Favorites = ({ favs }) => {
   const favorite = favs.map((affirm) => {
     return (
-      <div>
-        <div className="mini-container">
-          <div className="mini-card" key={affirm.id}>
-            <p className="mini-description"> {affirm.description}</p>
-            <img className="mini-pic" src={affirm.image} />
-          </div>
+      <div className="mini-container" key={affirm.id}>
+        <div className="mini-card">
+          <p className="mini-description"> {affirm.description}</p>
+          <img className="mini-pic" src={affirm.image} alt= "Geometric line art of moons, suns, and stars"/>
         </div>
-        <Footer />
       </div>
     );
   });
 
-  return <div className="mini-fav-container">{favorite}</div>;
+  return (
+    <div className="mini-fav-container">
+      {!favorite.length && <h2 className="fav-error">You have no favorites yet!</h2>}
+      {favorite}
+      <Footer />
+    </div>
+  );
 };
 
 
