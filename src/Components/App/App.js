@@ -20,7 +20,6 @@ class App extends Component {
   addFavorites = (id) => {
     const favs = this.state.affirmations.find(affirm => affirm.id === id);
     this.setState({ favorites: [...this.state.favorites, favs] })
-    console.log(favs)
   }
 
   componentDidMount = async () => {
@@ -29,30 +28,21 @@ class App extends Component {
       const data = await result.json()
       this.setState({ affirmations: data })
     } catch (error) {
-      this.setState({ error: `There was an error retrieving the data.`})
+      this.setState({ error: `There was an error retrieving the data.` })
     }
   }
-
-  //     getData()
-  //       .then(response => response.json())
-  //       .then(data => {
-  //         this.setState({ affirmations: data })
-  //         .catch(() => this.setState({ error: 'There was an error retrieving your data' }))
-  //       })
-  //   }
-  // }
-
 
   render() {
     return (
       <BrowserRouter>
         <main className='App'>
-        <Switch>
-          <Route exact path='/' component={Navigation} /> 
-            {this.state.error && <h2 className="api-error">{this.state.error }</h2>}
-          <Route exact path="/affirmationCard" render={() => <AffirmationCard affirmations={this.state.affirmations} add={this.addFavorites} />} /> 
-          <Route exact path="/favorites" render={() => <Favorites affirmations={this.state.affirmations} add={this.addFavorites} favs={this.state.favorites} />} />
-        </Switch>
+          <Switch>
+            <Route exact path='/' component={Navigation} />
+            {this.state.error && <h2 className="api-error">{this.state.error}</h2>}
+            <Route exact path="/affirmationCard" render={() => <AffirmationCard affirmations={this.state.affirmations} add={this.addFavorites} />} />
+            <Route exact path="/favorites" render={() => <Favorites affirmations={this.state.affirmations} add={this.addFavorites} favs={this.state.favorites} />} />
+            <Route path="*" render={() => <h2>We're sorry, it seems there's no affirmations at this time.</h2>} />
+          </Switch>
         </main>
       </BrowserRouter>
     )

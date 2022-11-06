@@ -1,5 +1,5 @@
 
-import React, { Component, useState } from 'react'
+import React from 'react'
 import Footer from '../Footer/Footer';
 import './AffirmationCard.css'
 import favoriteLogo from '../../images/image_10.png'

@@ -1,5 +1,11 @@
-describe('affirmation card ', () => {
+describe('empty spec', () => {
   beforeEach(() => {
+    cy.visit('http://localhost:3000/favorites');
+  });
+  it('should not display any favorites if none exist.', () => {
+    cy.get('.mini-fav-container').find('h2').contains('You have no favorites yet!')
+  })
+  it('should display your favorites if they have been added', () => {
     cy.visit('http://localhost:3000/affirmationCard');
     cy.intercept(
       'GET',
@@ -16,18 +22,16 @@ describe('affirmation card ', () => {
         ],
       }
     );
-  });
-
-  it('As a user, I should see an affirmation card', () => {
     cy.get('.affirmation-card').get('.card-description').contains('This is a test card')
     cy.get('.affirmation-card').get('.affirm-pic')
     cy.get('.favorite-button').click()
-  })
+    cy.get('.favorite-link').click(3)
+    cy.get('.mini-fav-container').should('have.length', 1)
 
-  it('As a user, you should see a footer that has a logo', () => {
-    cy.get('.footer').get('.radiance-logo-footer');
   })
-
+  it('As a user, I should see the footer still display on the favorites page', () => {
+    cy.get('.footer').find('.home-link').contains("HOME")
+  })
   it('As a user, i should be able to click on the home link in the footer and be routed home', () => {
     cy.get('.footer')
       .get('.home-link')
@@ -35,8 +39,4 @@ describe('affirmation card ', () => {
       .url()
       .should('include', '/');
   })
-  it('As a user, I should be able to click the favorites link in the footer and be routed to favorites', () => {
-    cy.get('.footer').get('.favorite-link').click()
-      .url().should('include', '/favorites')
-  })
-});
+})
