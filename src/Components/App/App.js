@@ -12,29 +12,25 @@ class App extends Component {
     this.state = {
       affirmations: [],
       favorites: [],
+      error: ''
     }
   }
 
   addFavorites = (id) => {
-    const favs = this.state.affirmations.find(affirm => affirm.id === id);
-    this.setState({ favorites: [...this.state.favorites, favs] })
-    console.log(favs)
-  }
+      const favs = this.state.affirmations.find(affirm => affirm.id === id);
+      this.setState({ favorites: [...this.state.favorites, favs] })
+      console.log(favs)
+    }
 
   componentDidMount = () => {
     fetch('https://radiance-app.herokuapp.com/api/v1/affirmations')
       .then(response => response.json())
       .then(data => {
         this.setState({ affirmations: data })
+      // .catch(erro)
       })
-    this.dataClean()
   }
-  dataClean = (data) => {
-    const lol = {}
-    this.state.affirmations.map((affirm) => {
-      this.setState({ affirmations: [...this.state.affirmations, { isfavortie: false }]})
-    })
-  }
+
 
   render() {
     return (
@@ -43,7 +39,7 @@ class App extends Component {
         <Switch>
           <Route exact path='/' component={Navigation}/> 
           <Route exact path="/affirmationCard" render={() => <AffirmationCard affirmations={this.state.affirmations} add={this.addFavorites} />} /> 
-          <Route exact path="/favorites" render={() => <Favorites affirmations={this.state.affirmations} add={this.addFavorites} favs={this.state.favorites} />}/>
+          <Route exact path="/favorites" render={() => <Favorites affirmations={this.state.affirmations} add={this.addFavorites} favs={this.state.favorites} />} />
         </Switch>
         </main>
       </BrowserRouter>

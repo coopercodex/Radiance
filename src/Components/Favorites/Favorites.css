@@ -8,6 +8,10 @@
     padding-bottom: 18%;
     justify-content: center;
 }
+.fav-error{
+    margin-top: 30%;
+    color: white;
+}
 
 .mini-container {
     margin: 2%;
