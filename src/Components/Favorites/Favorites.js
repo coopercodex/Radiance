@@ -9,7 +9,7 @@ const Favorites = ({ favs }) => {
       <div className="mini-container" key={affirm.id}>
         <div className="mini-card">
           <p className="mini-description"> {affirm.description}</p>
-          <img className="mini-pic" src={affirm.image} />
+          <img className="mini-pic" src={affirm.image} alt= "Geometric line art of moons, suns, and stars"/>
         </div>
       </div>
     );

@@ -10,7 +10,7 @@ const Footer = ({ handleReset, handleFavoriteClick, resetFavorites }) => {
             <Link to="/" className="home-link">HOME</Link>
             {/* <Route exact path='/' component={App}/> */}
             {/* <Link to='/' onClick={() => this.getData()} className="home-button">Home</Link> */}
-            <img className='radiance-logo-footer' src={radiance_logo} />
+            <img className='radiance-logo-footer' src={radiance_logo} alt='Line art of sunset in the mountains'/>
             <Link to='/favorites' className='favorite-link'>FAVORITES </Link>
         </div>
     )

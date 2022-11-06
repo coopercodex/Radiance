@@ -6,7 +6,7 @@ const Navigation = ({ history }) => {
     return (
         <section className='Nav'>
             <div className='logo-container'>
-                <img className='radiance-logo' src={radiance_logo} />
+                <img className='radiance-logo' src={radiance_logo} alt="Sunset in mountains line art" />
             </div>
             <div className='welcome-container'>
                 <h1 className='welcome'>

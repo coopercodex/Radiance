@@ -19,3 +19,14 @@
     /* z-index: 1; */
     overflow: hidden;
 }
+
+@media (max-width:600px){
+    .footer{
+        align-items: center;
+    }
+    .radiance-logo-footer{
+        width:20%; 
+        height: auto; 
+        margin-top: 15%;
+    }
+}

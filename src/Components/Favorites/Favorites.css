@@ -8,7 +8,8 @@
     padding-bottom: 18%;
     justify-content: center;
 }
-.fav-error{
+
+.fav-error {
     margin-top: 30%;
     color: white;
 }
@@ -47,4 +48,25 @@
     margin-top: 1%;
     height: auto;
     width: 20%;
+}
+
+@media(max-width:500px) {
+    .mini-fav-container {
+        display: flex;
+        margin-bottom: 25%;
+        justify-content: center;
+    }
+
+    .mini-card {
+        width: 60%;
+        /* align-items: center; */
+    }
+
+    .mini-container {
+        display: flex;
+        justify-content: center;
+    }
+    .mini-pic{
+        margin-top: 10%;
+    }
 }

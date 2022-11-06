@@ -21,9 +21,15 @@
   font-size: calc(10px + 2vmin);
   color: white;
 }
+.api-error{
+  color:white; 
+  text-align: center;
+  margin-top: 30%;
+}
+@media (min-width:500px){
+  
 
-
-
+}
 
 /* @media (prefers-reduced-motion: no-preference) {
   .App-logo {

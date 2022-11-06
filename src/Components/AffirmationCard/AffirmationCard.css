@@ -36,7 +36,8 @@
     bottom: 5px;
 }
 
-.favorite-button, button {
+.favorite-button,
+button {
     height: 8vh;
     align-items: flex-start;
     padding: 0;
@@ -45,7 +46,7 @@
 }
 
 .favorite-text {
-    color:  #edb86b;
+    color: #edb86b;
     align-items: flex-start;
     padding: 0;
     justify-content: center;
@@ -56,4 +57,16 @@
 .favorite-link {
     font-family: 'Montserrat', sans-serif;
     color: #edb86b;
+}
+
+@media (max-width:600px) {
+    .card-description {
+        font-size: 1rem;
+        color: white;
+    }
+
+    .affirmation-card {
+        width: 60%;
+        margin-top: 20%;
+    }
 }

@@ -16,9 +16,9 @@ const AffirmationCard = ({ affirmations, add }) => {
                 <p className='card-description'>
                     {currentAffirm.description}
                 </p>
-                <img className='affirm-pic' src={currentAffirm.image} />
+                <img className='affirm-pic' src={currentAffirm.image} alt="Geometric line art of suns, moons, and stars" />
                 <div className='favorite-container'>
-                    <button onClick={() => add(currentAffirm.id)}> <img className='favorite-button' src={favoriteLogo} /></button>
+                    <button onClick={() => add(currentAffirm.id)}> <img className='favorite-button' src={favoriteLogo} alt="Line art of a star" /></button>
                 </div>
             </div>
             <Footer />
