@@ -1,6 +1,6 @@
 describe('Navigation Page', () => {
-  beforeEach(() => {
-    cy.visit('http://localhost:3000');
+  beforeEach( () => {
+    cy.visit('https://radiance-delta.vercel.app/');
   })
 
   it('As a user, I should see the application logo', () => {

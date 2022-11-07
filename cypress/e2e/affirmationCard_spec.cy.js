@@ -1,6 +1,6 @@
 describe('affirmation card ', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/affirmationCard');
+    cy.visit('https://radiance-delta.vercel.app/affirmationCard');
     cy.intercept(
       'GET',
       'https://radiance-app.herokuapp.com/api/v1/affirmations',
