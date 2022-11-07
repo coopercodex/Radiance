@@ -13,10 +13,6 @@ describe('Navigation Page', () => {
 
   it('As a user, when I should be able to click on the button and get routed to an affirmation', () => {
     cy.get('.affirmation-button').click()
-    .url().should('include', '/affirmationCard')
+      .url().should('include', '/affirmationCard')
   })
-
-  
-
-
 })
