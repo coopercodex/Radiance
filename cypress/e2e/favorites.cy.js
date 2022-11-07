@@ -1,12 +1,12 @@
 describe('empty spec', () => {
   beforeEach(() => {
-    cy.visit('http://localhost:3000/favorites');
+    cy.visit('https://radiance-delta.vercel.app/favorites');
   });
   it('should not display any favorites if none exist.', () => {
     cy.get('.mini-fav-container').find('h2').contains('You have no favorites yet!')
   })
   it('should display your favorites if they have been added', () => {
-    cy.visit('http://localhost:3000/affirmationCard');
+    cy.visit('https://radiance-delta.vercel.app/affirmationCard');
     cy.intercept(
       'GET',
       'https://radiance-app.herokuapp.com/api/v1/affirmations',
