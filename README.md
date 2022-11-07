@@ -40,7 +40,7 @@
 - Login Page for multiple users
 
 ## GIF
-- GIF HERE
+![Nov-07-2022 11-36-53](https://user-images.githubusercontent.com/83977544/200388484-ccb49775-6cb8-477a-9877-f6512aca872a.gif)
 
 ## Set Up
 - Deployed Application: https://radiance-delta.vercel.app/
