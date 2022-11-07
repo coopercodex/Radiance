@@ -35,12 +35,16 @@
 - Click the "Take a breath" button on the home page and view an affirmation card
 - Save their favorite affirmation to a page of favorites
 
+## Possible Future Extentsions
+- Adding a new data table to the back-end to allow the users to store their favorites and add their own affirmations
+- Login Page for multiple users
+
 ## GIF
 - GIF HERE
 
 ## Set Up
-- Deployed Application: link here
-- Deployed API: link here
+- Deployed Application: https://radiance-delta.vercel.app/
+- Deployed API: https://radiance-app.herokuapp.com/api/v1/affirmations
 
 ## Organizational Resources:
 - Project board
