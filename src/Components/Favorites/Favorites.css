@@ -55,11 +55,12 @@
         display: flex;
         margin-bottom: 25%;
         justify-content: center;
+        margin-top: 10%;
     }
 
     .mini-card {
         width: 60%;
-        /* align-items: center; */
+        
     }
 
     .mini-container {
