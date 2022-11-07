@@ -41,7 +41,6 @@ class App extends Component {
             {this.state.error && <h2 className="api-error">{this.state.error}</h2>}
             <Route exact path="/affirmationCard" render={() => <AffirmationCard affirmations={this.state.affirmations} add={this.addFavorites} />} />
             <Route exact path="/favorites" render={() => <Favorites affirmations={this.state.affirmations} add={this.addFavorites} favs={this.state.favorites} />} />
-            <Route path="*" render={() => <h2>We're sorry, it seems there's no affirmations at this time.</h2>} />
           </Switch>
         </main>
       </BrowserRouter>
