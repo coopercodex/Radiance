@@ -47,8 +47,8 @@
 - Deployed API: https://radiance-app.herokuapp.com/api/v1/affirmations
 
 ## Organizational Resources:
-- Project board
-- Excalidraw
+- [Project board](https://trello.com/b/DAQ4krma/stretchtech-be)
+- [Excalidraw](https://excalidraw.com/#json=kQ7kzxTzajht4l8vp0vt1,debxB7sGHVxgrxav1SaERg)
 
 ## Sources
 - [MDN](http://developer.mozilla.org/en-US/)
