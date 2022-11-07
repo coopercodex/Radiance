@@ -1,5 +1,10 @@
 # Radiance
-- screen shot here
+<b>Home Screen</b><br>
+![Screenshot 2022-11-07 at 11 28 01 AM](https://user-images.githubusercontent.com/83977544/200386975-010d2241-286a-4630-b4e8-f553d0bdd049.png)
+<b>Daily Affirmation</b><br>
+![Screenshot 2022-11-07 at 11 28 14 AM](https://user-images.githubusercontent.com/83977544/200387030-6dda4772-5814-44a3-8dc9-2773bd1df966.png)
+<b>Favorites Page</b><br>
+![Screenshot 2022-11-07 at 11 28 28 AM](https://user-images.githubusercontent.com/83977544/200387190-664bf23b-f2ef-4cce-8ede-b5e59f71e43c.png)
 
 ## Table of Contens
 - [Introduction](#introduction)
