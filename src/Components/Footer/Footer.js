@@ -2,7 +2,6 @@ import React from 'react'
 import './Footer.css'
 import radiance_logo from '../../images/radiance_logo.png'
 import { Link } from 'react-router-dom'
-import App from '../App/App'
 
 const Footer = () => {
     return (

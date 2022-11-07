@@ -4,6 +4,11 @@ import Footer from "../Footer/Footer";
 import './Favorites.css'
 
 const Favorites = ({ favs }) => {
+  if (favs) {
+    window.onbeforeunload = () => true
+  } else {
+    window.onbeforeunload = undefined
+  }
   const favorite = favs.map((affirm) => {
     return (
       <div className="mini-container" key={affirm.id}>
