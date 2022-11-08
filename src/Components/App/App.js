@@ -19,6 +19,7 @@ class App extends Component {
 
   addFavorites = (id) => {
     const favs = this.state.affirmations.find(affirm => affirm.id === id);
+    
     this.setState({ favorites: [...this.state.favorites, favs] })
   }
 

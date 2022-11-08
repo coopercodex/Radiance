@@ -9,9 +9,9 @@ const Favorites = ({ favs }) => {
   } else {
     window.onbeforeunload = undefined
   }
-  const favorite = favs.map((affirm) => {
+  const favorite = favs.map((affirm, index) => {
     return (
-      <div className="mini-container" key={affirm.id}>
+      <div className="mini-container" id={affirm.id} key={index}>
         <div className="mini-card">
           <p className="mini-description"> {affirm.description}</p>
           <img className="mini-pic" src={affirm.image} alt= "Geometric line art of moons, suns, and stars"/>

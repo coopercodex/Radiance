@@ -16,13 +16,14 @@
     align-items: center;
     left: 0;
     bottom: 0;
-    /* z-index: 1; */
     overflow: hidden;
 }
 
 @media (max-width:600px){
-    .footer{
+    .footer {
         align-items: center;
+        margin-top: 15%;
+        position: fixed;
     }
     .radiance-logo-footer{
         width:20%; 
